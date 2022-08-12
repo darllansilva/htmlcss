@@ -10,21 +10,32 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,700&family=Zilla+Slab&display=swap');
 
         body {
+            
             height: 100vh;
+            /*
             background-color: rgba(0, 0, 0, 0.486);
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
+            */
+
+            /*Podemos criar shorthends do banckground , porém ainda só não esta funcionando o size em 12-08-2022*/
+            /* color > image > position >  repeat > [size] > attachment */
+            background: rgba(0, 0, 0, 0.699) url('imagens/wallpaper002.jpg') center top  no-repeat fixed;
+            background-size: cover;
+            margin-bottom: 10px;
         }
 
         main {
             background-color: white;
-            width: 500px;
+            max-width: 700px;
             border-radius: 10px;
             margin: auto;
             padding: 10px;
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.555);
+            
             
         }
 
