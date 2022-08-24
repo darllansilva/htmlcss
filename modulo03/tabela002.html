@@ -13,16 +13,38 @@
         }
 
         table {
+            position: relative;
             width: 500px;
             border-collapse: collapse;
+
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+
         }
 
         thead {
-            background-color: rgba(128, 128, 128, 0.603);
+            background-color: rgba(15, 15, 15, 0.637);
             color: #fff;
         }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgba(15, 15, 15, 0.637);
+
+        }
+
+        tbody > tr:nth-child(2n) { /*Usamos este PseudaClasse , para implementar o efeito zebrado */
+            background-color: rgba(211, 211, 211, 0.705);
+        }
+
         tfoot {
-            background-color: rgba(128, 128, 128, 0.603);
+            background-color: rgba(15, 15, 15, 0.637);
             color: #fff;
         }
 
@@ -41,25 +63,18 @@
         }
 
     </style>
-
-    <script>
-        $(function(){
-           var num = 0;
-           $(".num").each(function(){
-            num += parseInt($(this).text());
-           });
-
-           $("#soma").text(num);
-        });
-    </script>
 </head>
 <body>
     <table>
         <h1>Trabalhando com tabelas maiores </h1>
+
+        <!--CABECALHO DA TABELA-->
+
+        <caption>População das Unidade Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 140px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -200,11 +215,24 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Tabela de Habitantes</th>
+                <th scope="row">Tabela de Habitantes</th>
                 <td id="soma"></td>
             </tr>
         </tfoot>
     </table>
+
+    <script>
+        $(function(){
+           
+            var num = 0;
+           
+            $(".num").each(function(){
+            num += parseInt($( this ).text());
+           });
+
+           $("#soma").text(num);
+        });
+    </script>
 </body>
 
 
