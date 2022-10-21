@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="D.Sites" />
+    <title>Estudos de iframe</title>
+    
+    <!-- Configurando as CSS do iframe , mesmo tento uma configuração inline , o que prevalece 
+    vai ser aqui. -->
+    
+    <style type="text/css">
+        iframe {
+            display: block;
+            width: 500px;
+            height: 500px;
+            /*border: 1px dashed black;*/ /*caso eu queria colocar a borda*/ 
+        }
+
+        p {
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de iframe</h1>
+    
+    <!--Tamanho padrão 300x150-->
+    <p>
+        Estou aprendendo HTML5 e CSS3 do 
+        <iframe src="https://www.cursoemvideo.com/login/" frameborder="0" height="400">
+            <a href="https://www.cursoemvideo.com/login/" target="_blank">Curso em video</a>
+        </iframe>
+    </p>
+
+    <p>
+        Repositorio do Guanabara
+
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" width="500" height="500">
+            <a href="https://gustavoguanabara.github.io/" target="_blank">Github</a>
+        </iframe>
+        também é muito legal
+        
+    </p>
+</body>
+</html>
