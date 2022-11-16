@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formulários</title>
+
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com formulários</h1>
+    
+    <form action="POST">
+        <!-- Caixa de cor -->
+        <p>
+            <label for="icor">Cores:</label>
+            <input type="color" name="cor" id="icor" value="#fff000" />
+        </p>
+        
+        <!-- Envio de imagem de perfil -->
+        <p>
+            <label for="iperfil">Carregar imagem de perfil </label>
+            <input type="file" name="img-perfil" id="iperfil" />
+        </p>
+
+        <!--Nivel de aprovação-->
+        <p>
+            <label for="inivel">Nivel de aprovação</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="10" value="3" />
+        </p>
+    </form>
+    
+    <input type="submit" value="Enviar" />
+    <input type="reset" value="Limpar" />
+</body>
+</html>
